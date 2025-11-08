@@ -23,8 +23,6 @@ export function ModeToggle() {
     setTheme(current === "dark" ? "light" : "dark");
   }, [resolvedTheme, theme, setTheme]);
 
-  // Only consider the actual theme after mount. Before mount, default to light
-  // so server HTML matches the initial client render and avoids hydration errors.
   const isDark = mounted ? (resolvedTheme || theme) === "dark" : false;
 
   return (

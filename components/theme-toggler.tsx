@@ -1,40 +1,53 @@
 "use client";
 
-import * as React from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
+
+  // Prevent hydration mismatch by rendering theme-dependent UI only after
+  // the component is mounted on the client. Server and initial client render
+  // will use `mounted === false` and produce identical HTML.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
+
+  const toggleTheme = useCallback(() => {
+    const current = resolvedTheme || theme;
+    setTheme(current === "dark" ? "light" : "dark");
+  }, [resolvedTheme, theme, setTheme]);
+
+  // Only consider the actual theme after mount. Before mount, default to light
+  // so server HTML matches the initial client render and avoids hydration errors.
+  const isDark = mounted ? (resolvedTheme || theme) === "dark" : false;
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
-          <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Button
+      variant="outline"
+      size="icon"
+      onClick={toggleTheme}
+      aria-pressed={mounted ? isDark : false}
+      aria-label="Toggle theme"
+    >
+      <Sun
+        className={`h-[1.2rem] w-[1.2rem] transition-all ${
+          isDark ? "scale-0 -rotate-90" : "scale-100 rotate-0"
+        }`}
+        aria-hidden="true"
+      />
+      <Moon
+        className={`absolute h-[1.2rem] w-[1.2rem] transition-all ${
+          isDark ? "scale-100 rotate-0" : "scale-0 rotate-90"
+        }`}
+        aria-hidden="true"
+      />
+      <span className="sr-only">Toggle theme</span>
+    </Button>
   );
 }

@@ -32,6 +32,7 @@ export function ModeToggle() {
       onClick={toggleTheme}
       aria-pressed={mounted ? isDark : false}
       aria-label="Toggle theme"
+      className="rounded-full cursor-pointer"
     >
       <Sun
         className={`h-[1.2rem] w-[1.2rem] transition-all ${

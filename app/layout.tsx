@@ -1,6 +1,6 @@
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/layouts/frontend/Header";
+import HeaderSwitcher from "@/components/layouts/frontend/HeaderSwitcher";
 import Footer from "@/components/layouts/frontend/Footer";
 import { Oswald, Rajdhani } from "next/font/google";
 import LoadingOverlay from "@/components/loading-overlay";
@@ -39,7 +39,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header /> {/* Public header */}
+          <HeaderSwitcher /> {/* Conditionally renders Header or HomeHeader */}
           <div className="frontend-wrapper">{children}</div>
           <Footer />
         </ThemeProvider>

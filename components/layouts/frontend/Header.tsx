@@ -17,7 +17,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-[1680px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="w-1/5">
           <Link href="/" className={`font-bold mb-0 text-blue-600 text-3xl`}>
-            CodeWith Avi
+            QuantumAlgo.AI
           </Link>
         </div>
 
@@ -26,13 +26,13 @@ export default function Header() {
             <ul className="flex justify-center items-center gap-6">
               <li>
                 <Link
-                  href="/"
+                  href="/portfolio"
                   className={`uppercase font-bold ${
-                    pathname === "/" ? "text-amber-400" : "text-white"
+                    pathname === "/portfolio" ? "text-amber-400" : "text-white"
                   }`}
-                  aria-current={pathname === "/" ? "page" : undefined}
+                  aria-current={pathname === "/portfolio" ? "page" : undefined}
                 >
-                  MY PORTFOLIO
+                  PORTFOLIO
                 </Link>
               </li>
               <li>

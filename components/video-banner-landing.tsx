@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Spinner } from "@/components/ui/spinner";
 import Link from "next/link";
 
-export default function VideoBannerClient() {
+export default function VideoBannerLanding() {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleVideoReady = () => {
@@ -42,19 +42,28 @@ export default function VideoBannerClient() {
 
         {/* Banner content */}
         <div className="relative z-10 h-full flex items-center justify-center flex-col px-6 text-white">
-          <div className="flex items-center justify-center px-6">
-            <h1 className="text-[285px] font-semibold mr-10">HI!</h1>
+          <div className="flex items-center justify-center px-6 flex-col md:flex-row gap-5">
+            <h1 className="text-[60px] sm:text-[150px] md:text-[220px] lg:text-[315px] font-semibold  text-center md:text-left">
+              HI!
+            </h1>
             <div>
-              <h2 className="text-4xl font-semibold mb-5">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-5 text-center md:text-left">
                 I&#39;m AVIJIT GHOSH
               </h2>
-              <h3 className="text-7xl font-semibold mb-5">
-                Fullstact Developer
+              <h3 className="text-3xl md:text-7xl font-semibold mb-5 text-center md:text-left">
+                <span className="bg-gradient-to-r from-lime-200 to-blue-500 bg-clip-text text-transparent">
+                  Fullstack
+                </span>{" "}
+                Developer
               </h3>
-              <p className="mt-4 max-w-2xl text-4xl">
-                and the creator of QuantumAlgo.
+              <p className="mt-4 max-w-2xl text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center md:text-left">
+                and the creator of{" "}
+                <span className="bg-pink-500 text-[26px] sm:text-[40px] md:text-[50px] lg:text-[60px] px-2 rounded">
+                  QuantumAlgo.AI
+                </span>
+                .
               </p>
-              <p className="mt-4 max-w-2xl text-2xl">
+              <p className="mt-4 max-w-2xl text-[16px] sm:text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
                 — Take a look at my projects and get in touch.
               </p>
             </div>
@@ -64,34 +73,36 @@ export default function VideoBannerClient() {
             <Link
               href="/portfolio"
               className="
-    mt-8 px-8 py-3
-    min-w-[220px]
-    text-white text-lg font-semibold
-    rounded-full
-    bg-gradient-to-r from-pink-500 to-blue-600
-    shadow-lg
-    flex items-center justify-center
-    hover:opacity-90
-    transition-all duration-300
-  "
+        mt-8 px-3 py-3
+        min-w-[150px] sm:min-w-[220px]
+        text-base sm:text-lg font-semibold
+        rounded-full
+        bg-gradient-to-r from-pink-500 to-blue-600
+        shadow-lg
+        flex items-center justify-center
+        hover:opacity-90
+        transition-all duration-300
+        text-center
+        "
             >
               See My Portfolio
             </Link>
             <Link
               href="/hireme"
               className="
-    mt-8 px-8 py-3
-    min-w-[220px]
-    text-white text-lg font-semibold
-    rounded-full
-    relative
-    flex items-center justify-center
-    bg-white/10 backdrop-blur-md
-    border border-pink-500
-    bg-clip-padding
-    before:content-[''] before:-z-10
-    hover:opacity-90 transition-all duration-300
-  "
+        mt-8 px-3 py-3
+        min-w-[150px] sm:min-w-[220px]
+        text-white text-base sm:text-lg font-semibold
+        rounded-full
+        relative
+        flex items-center justify-center
+        bg-white/10 backdrop-blur-md
+        border border-pink-500
+        bg-clip-padding
+        before:content-[''] before:-z-10
+        hover:opacity-90 transition-all duration-300
+        text-center
+        "
             >
               Hire Me
             </Link>

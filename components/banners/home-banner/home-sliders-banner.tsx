@@ -7,9 +7,7 @@ import { Navigation } from "swiper/modules";
 //   declare module 'swiper/css';
 //   declare module 'swiper/css/navigation';
 // to properly type these imports.
-// @ts-expect-error: no type declarations for side-effect import of 'swiper/css'
 import "swiper/css";
-// @ts-expect-error: no type declarations for side-effect import of 'swiper/css/navigation'
 import "swiper/css/navigation"; // Optional for custom styling
 
 const movies = [

@@ -44,7 +44,7 @@ export default function Home() {
         </div>
         <div className="text-center max-w-8xl m-auto px-4 mb-13">
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-semibold mb-5  ">
-            <span className="text-[50px] md:text-[105px] lg:text-[125px] xl:text-[195px] font-semibold mb-2 line-height-4.3 bg-gradient-to-b from-[#1aaebd] dark:from-gray-600 to-transparent bg-clip-text text-transparent flex justify-center">
+            <span className="text-[45px] md:text-[105px] lg:text-[125px] xl:text-[195px] font-semibold mb-2 line-height-4.3 bg-gradient-to-b from-[#1aaebd] dark:from-gray-600 to-transparent bg-clip-text text-transparent flex justify-center">
               Stay Updated with
             </span>
             <span className="text-black dark:text-[#68c394]">

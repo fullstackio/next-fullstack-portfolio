@@ -141,6 +141,12 @@ h6 {
   font-family: var(--font-head);
 }
 
+html,
+body,
+p {
+  font-size: 18px;
+}
+
 /* Gradient text animation utilities */
 @layer utilities {
   .animate-glow-slow {
@@ -198,3 +204,121 @@ h6 {
 
 /* Edge glow utility for buttons */
 @layer utilities {}
+
+/* Hide native scrollbars for SmoothScroll */
+.hide-scrollbar {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+
+
+.animated-border-box.radius-style-2,
+.animated-border-box.radius-style-2 .tp-btn-gradient.sm {}
+
+.animated-border-box {
+  z-index: 0;
+  line-height: 0;
+  transition: all .4s;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-border-box.radius-style-2,
+.animated-border-box.radius-style-2 .tp-btn-gradient.sm {}
+
+.animated-border-box:before {
+  background-image: conic-gradient(#fff, #fff200, #fff 25%);
+}
+
+.animated-border-box.radius-style-2:before {
+  background-image: conic-gradient(#0000, #fff200, #0000 25%);
+}
+
+.animated-border-box:before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  background-image: conic-gradient(#0000, #fff200, #0000 25%);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 99999px;
+  height: 99999px;
+  animation: 4s linear infinite rotate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  /* ...existing code... */
+  animation: 4s linear infinite rotate;
+  /* ...existing code... */
+}
+
+
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+
+.animated-border-card {
+  z-index: 0;
+  line-height: 0;
+  transition: all .4s;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-border-card.radius-style-2,
+.animated-border-card.radius-style-2 .tp-btn-gradient.sm {}
+
+.animated-border-card:before {
+  background-image: conic-gradient(#fff, #0000ff, #fff 35%);
+}
+
+.animated-border-card.radius-style-2:before {
+  background-image: conic-gradient(#0000, #0000ff, #0000 35%);
+}
+
+.animated-border-card:before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  background-image: conic-gradient(#0000, #0000ff, #0000 25%);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 99999px;
+  height: 99999px;
+  animation: 4s linear infinite rotate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  /* ...existing code... */
+  animation: 4s linear infinite rotate;
+  /* ...existing code... */
+}
+
+
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.scrollbar-track-y {
+  width: 0px !important;
+}

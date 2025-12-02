@@ -2,6 +2,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import HeaderSwitcher from "@/components/layouts/frontend/HeaderSwitcher";
 import Footer from "@/components/layouts/frontend/Footer";
+import SmoothScroll from "@/components/ui/SmoothScroll";
 import { Oswald, Rajdhani } from "next/font/google";
 import LoadingOverlay from "@/components/loading-overlay";
 
@@ -33,6 +34,8 @@ export default function RootLayout({
       <body>
         {/* Global loading overlay shown on initial page load */}
         <LoadingOverlay />
+        {/* Animated mouse tracker dot/circle */}
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -40,8 +43,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <HeaderSwitcher /> {/* Conditionally renders Header or HomeHeader */}
-          <div className="frontend-wrapper">{children}</div>
-          <Footer />
+          <SmoothScroll>
+            <div className="frontend-wrapper">{children}</div>
+            <Footer />
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>

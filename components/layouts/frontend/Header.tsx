@@ -3,6 +3,7 @@ import { ModeToggle } from "@/components/theme-toggler";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Header() {
   const pathname = usePathname() ?? "";
@@ -16,7 +17,16 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-[1680px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="w-1/5">
-          <Link href="/" className={`font-bold mb-0 text-blue-600 text-3xl`}>
+          <Link
+            href="/"
+            className={`font-bold mb-0 text-blue-600 text-3xl flex items-center gap-2`}
+          >
+            <Image
+              src="/logo-main.png"
+              alt="QuantumAlgo.AI Logo"
+              width={50}
+              height={50}
+            />
             QuantumAlgo.AI
           </Link>
         </div>

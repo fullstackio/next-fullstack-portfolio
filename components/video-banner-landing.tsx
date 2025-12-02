@@ -51,19 +51,19 @@ export default function VideoBannerLanding() {
                 I&#39;m AVIJIT GHOSH
               </h2>
               <h3 className="text-3xl md:text-7xl font-semibold mb-5 text-center md:text-left">
-                <span className="bg-gradient-to-r from-lime-200 to-blue-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#1aaebd]  to-[#68c394] bg-clip-text text-transparent">
                   Fullstack
                 </span>{" "}
                 Developer
               </h3>
-              <p className="mt-4 max-w-2xl text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center md:text-left">
+              <p className="mt-4 max-w-2xl text-2xl sm:text-3xl md:text-4xl lg:text-4xl! text-center md:text-left">
                 and the creator of{" "}
-                <span className="bg-pink-500 text-[26px] sm:text-[40px] md:text-[50px] lg:text-[60px] px-2 rounded">
+                <span className="bg-blue-800 text-[26px] md:text-[40px] px-2 rounded">
                   QuantumAlgo.AI
                 </span>
                 .
               </p>
-              <p className="mt-4 max-w-2xl text-[16px] sm:text-2xl md:text-3xl lg:text-4xl text-center md:text-left">
+              <p className="mt-4 max-w-2xl text-[16px] sm:text-2xl md:text-2xl lg:text-2xl! text-center md:text-left">
                 — Take a look at my projects and get in touch.
               </p>
             </div>
@@ -77,7 +77,7 @@ export default function VideoBannerLanding() {
         min-w-[150px] sm:min-w-[220px]
         text-base sm:text-lg font-semibold
         rounded-full
-        bg-gradient-to-r from-pink-500 to-blue-600
+        bg-gradient-to-r from-[#1aaebd]  to-[#68c394]
         shadow-lg
         flex items-center justify-center
         hover:opacity-90
@@ -96,7 +96,7 @@ export default function VideoBannerLanding() {
         rounded-full
         relative
         flex items-center justify-center
-        bg-white/10 backdrop-blur-md
+        bg-white/40 backdrop-blur-md
         border border-pink-500
         bg-clip-padding
         before:content-[''] before:-z-10

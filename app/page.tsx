@@ -51,7 +51,7 @@ export default function Home() {
               My Latest Projects & Dev Insights
             </span>
           </h2>
-          <p className="dark:text-gray-400 text-gray-700 text-[16px] md:text-[20px]">
+          <p className="dark:text-gray-400 text-gray-700 text-[16px] md:text-[20px] text-center md:text-left">
             Subscribe to get updates on new projects, tutorials, and development
             tips I share periodically.
           </p>
@@ -60,7 +60,7 @@ export default function Home() {
           <div className="max-w-[1660px] m-auto px-4">
             <Card className="md:mx-auto max-w-[880px] w-full px-1 py-5  bg-black/7 backdrop-blur-lg border border-white/8">
               <CardContent>
-                <p className="dark:text-gray-400 text-gray-700 text-[16px] sm:text-[18px]">
+                <p className="dark:text-gray-400 text-gray-700 text-[16px] sm:text-[18px] text-center md:text-left">
                   Join a growing community of developers, clients, and tech
                   enthusiasts who follow my work.
                 </p>
@@ -91,7 +91,7 @@ export default function Home() {
                 </form>
               </CardContent>
               <CardFooter>
-                <span className="text-sm sm:text-md text-gray-400">
+                <span className="text-sm sm:text-md text-gray-400 text-center md:text-left">
                   Your email is safe with me. I don’t share or misuse subscriber
                   information.
                 </span>

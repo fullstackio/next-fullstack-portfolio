@@ -96,8 +96,8 @@ export default function VideoBannerLanding() {
         rounded-full
         relative
         flex items-center justify-center
-        bg-white/40 backdrop-blur-md
-        border border-pink-500
+        bg-black/40 backdrop-blur-md
+        border border-[#1aaebd]
         bg-clip-padding
         before:content-[''] before:-z-10
         hover:opacity-90 transition-all duration-300

@@ -16,7 +16,7 @@ export default function Footer() {
   const pathname = usePathname() ?? "";
   if (pathname.startsWith("/admin")) return null;
   return (
-    <footer className="w-full overflow-hidden relative border-t bg-background/80 py-5 md:py-10 lg:py-14  text-center text-xs text-muted-foreground">
+    <footer className="w-full overflow-hidden relative border-t bg-background/80 py-8 md:py-10 lg:py-14  text-center text-xs text-muted-foreground">
       <div className="pointer-events-none absolute inset-0">
         {/* Light mode gradients */}
 

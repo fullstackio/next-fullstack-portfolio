@@ -26,11 +26,11 @@ export default function Header() {
         scrolled ? "scrolled" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-[1280px] items-center justify-between  dark:bg-black/6 bg-white/6 backdrop-blur-lg border border-white/8 px-2 py-1 md:px-7 md:py-4 lg:px-10 lg:py-5 rounded-full">
+      <div className="mx-auto flex max-w-[1280px] items-center justify-between  dark:bg-black/6 bg-white/6 backdrop-blur-lg border border-white/8 px-2 py-1 md:px-7 md:py-3 lg:px-10 lg:py-3 rounded-full">
         <div className="w-1/5">
           <Link
             href="/"
-            className="gap-3 font-bold mb-0 text-white text-[18px] md:text-2xl lg:text-3xl ml-2 md:ml-3 flex items-center"
+            className="gap-3 font-bold mb-0 text-white text-[18px] md:text-2xl lg:text-3xl   flex items-center"
           >
             <Image
               src="/logo-main.png"

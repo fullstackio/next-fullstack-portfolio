@@ -21,13 +21,13 @@ export default function Header() {
             href="/"
             className={`font-bold mb-0 text-blue-600 text-3xl flex items-center gap-2`}
           >
-            <Image
+            {/* <Image
               src="/logo-main.png"
               alt="QuantumAlgo.AI Logo"
               width={50}
               height={50}
-            />
-            QuantumAlgo.AI
+            /> */}
+            Code With Avijit
           </Link>
         </div>
 

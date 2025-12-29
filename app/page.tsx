@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import VideoBannerLanding from "@/components/video-banner-landing";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import { Send } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "QuantumAlgo | Fullstack Portfolio of Avijit Ghosh",
+  title: "Code With Avijit | Fullstack Portfolio of Avijit Ghosh",
   description: "Fullstack portfolio — React, Next.js, Node, MongoDB",
   openGraph: {
-    title: "QuantumAlgo | Fullstack Portfolio of Avijit Ghosh",
+    title: "Code With Avijit | Fullstack Portfolio of Avijit Ghosh",
     description: "Fullstack portfolio — React, Next.js, Node, MongoDB",
     url: "https://quantumalgoai.vercel.app/",
     images: [
@@ -60,11 +65,11 @@ export default function Home() {
         </div>
         <div className="text-center max-w-8xl m-auto px-4 mb-13">
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-semibold mb-5  ">
-            <span className="text-[45px] md:text-[105px] lg:text-[125px] xl:text-[195px] font-semibold mb-2 line-height-4.3 bg-linear-to-b from-[#1aaebd] dark:from-gray-600 to-transparent bg-clip-text text-transparent flex justify-center">
+            <span className="text-[45px] md:text-[105px] lg:text-[125px] xl:text-[195px] font-semibold mb-2 line-height-4.3 bg-linear-to-b from-[#85a5d4] dark:from-gray-600 to-transparent bg-clip-text text-transparent flex justify-center">
               Stay Updated with
             </span>
-            <span className="text-black dark:text-[#68c394]">
-              My Latest Projects & Dev Insights
+            <span className="bg-gradient-to-r from-[#85a5d4]  to-[#e4b472] bg-clip-text text-transparent ">
+              My Latest Blogs & Dev Insights
             </span>
           </h2>
           <p className="dark:text-gray-400 text-gray-700 text-[16px] md:text-[20px] text-center">
@@ -73,47 +78,52 @@ export default function Home() {
           </p>
         </div>
         <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="max-w-[1660px] m-auto px-4">
-            <Card className="md:mx-auto max-w-[880px] w-full px-1 py-5  bg-black/7 backdrop-blur-lg border border-white/8">
-              <CardContent className="px-2 md:px-4 lg:px-6">
-                <p className="dark:text-gray-400 text-gray-700 text-[16px] sm:text-[18px] text-center md:text-left">
+          <div className="max-w-[1660px] m-auto px-4 flex justify-center">
+            {/* <Card className="md:mx-auto max-w-[880px] w-full px-1 py-5 bg-black/7 backdrop-blur-lg border border-white/8 animated-border-card">
+             
+            </Card> */}
+            <div className="animated-border-card p-[2px] rounded-2xl m-auto w-full max-w-[880px]">
+              <Card className="md:mx-auto max-w-[880px] w-full px-1 py-5 gap-3   border border-white/8  ">
+                <CardHeader className="pt-3 dark:text-gray-400 text-gray-700 text-[16px] sm:text-[18px] text-center md:text-left md:line-height-[22px] sm:line-height-[22px] leading-[1.7]">
                   Join a growing community of developers, clients, and tech
                   enthusiasts who follow my work.
-                </p>
-                <form className="mt-4 flex flex-col sm:flex-row w-full gap-2">
-                  <input
-                    type="email"
-                    placeholder="Enter your email to subscribe…"
-                    className="dark:border-gray-700 border-gray-400 border w-full rounded-4xl h-10 sm:h-15 px-4 sm:px-6 py-3 sm:py-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    required
-                  />
+                </CardHeader>{" "}
+                <CardContent className="px-2 md:px-4 lg:px-6 ">
+                  <form className="mt-4 flex flex-col sm:flex-row w-full gap-2">
+                    <input
+                      type="email"
+                      placeholder="Enter your email to subscribe…"
+                      className="dark:border-gray-700 border-gray-400 border w-full rounded-4xl h-10 sm:h-15 px-4 sm:px-6 py-3 sm:py-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      required
+                    />
 
-                  <button
-                    type="submit"
-                    className="
-                  px-2 py-2
-                  md:px-4 md:py-3
-                  min-w-[140px] sm:min-w-[200px]
-                  text-white text-base sm:text-lg font-light
-                  rounded-full
-                  bg-gradient-to-r from-[#9A6CFF] to-[#4A00E0]
-                  shadow-lg
-                  flex items-center justify-center
-                  hover:opacity-90
-                  transition-all duration-300 cursor-pointer
-                "
-                  >
-                    Subscribe Now <Send className="ml-2" />
-                  </button>
-                </form>
-              </CardContent>
-              <CardFooter>
-                <span className="text-sm sm:text-md text-gray-400 text-center md:text-left">
-                  Your email is safe with me. I don’t share or misuse subscriber
-                  information.
-                </span>
-              </CardFooter>
-            </Card>
+                    <button
+                      type="submit"
+                      className="
+                px-2 py-2
+                md:px-4 md:py-2
+                min-w-[140px] sm:min-w-[200px]
+                text-white text-base sm:text-lg font-light
+                rounded-full
+                bg-gradient-to-r from-[#9A6CFF] to-[#4A00E0]
+                shadow-lg
+                flex items-center justify-center
+                hover:opacity-90
+                transition-all duration-300 cursor-pointer
+              "
+                    >
+                      Subscribe Now <Send className="ml-2" />
+                    </button>
+                  </form>
+                </CardContent>
+                <CardFooter>
+                  <span className="text-sm sm:text-md text-gray-400 text-center md:text-left">
+                    Your email is safe with me. I don’t share or misuse
+                    subscriber information.
+                  </span>
+                </CardFooter>
+              </Card>
+            </div>
           </div>
         </div>
       </section>

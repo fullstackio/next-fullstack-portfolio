@@ -26,22 +26,19 @@ export default function Header() {
         scrolled ? "scrolled" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-[1280px] items-center justify-between  dark:bg-black/6 bg-white/6 backdrop-blur-lg border border-white/8 px-2 py-1 md:px-7 md:py-3 lg:px-10 lg:py-3 rounded-full">
-        <div className="w-1/5">
-          <Link
-            href="/"
-            className="gap-3 font-bold mb-0 text-white text-[18px] md:text-2xl lg:text-3xl   flex items-center"
-          >
-            <Image
+      <div className="mx-auto flex max-w-[1280px] items-center justify-between  dark:bg-white/6 bg-black/6 backdrop-blur-lg border border-white/8 px-2 py-1 md:px-7 md:py-3 lg:px-6 lg:py-3 rounded-full">
+        <div className="w-auto">
+          <Link href="/" className="gap-3 w-full flex">
+            {/* <Image
               src="/logo-main.png"
               alt="QuantumAlgo.AI Logo"
               width={60}
               height={60}
               className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
-            />
-            <span className="bg-gradient-to-r from-[#1aaebd]  to-[#68c394] bg-clip-text text-transparent hidden md:flex lg:flex">
-              QuantumAlgo.AI
-            </span>
+            /> */}
+            <h1 className="text-[#00b7e0] text-2xl sm:text-3xl md:text-4xl">
+              Code With Avijit
+            </h1>
           </Link>
         </div>
 
@@ -55,7 +52,7 @@ export default function Header() {
     md:w-30 md:h-10
     text-white text-lg font-semibold
     rounded-full
-    bg-gradient-to-r from-yellow-200  to-blue-600
+    bg-gradient-to-r from-[#85a5d4]  to-[#e4b472]
     shadow-lg
     flex items-center justify-center
     hover:opacity-90

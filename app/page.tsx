@@ -38,8 +38,8 @@ export default function Home() {
     <div className="">
       <VideoBannerLanding />
 
-      <section className="relative w-full  py-10 md:py-22 lg:py-30 overflow-hidden">
-        <div className="pointer-events-none absolute inset-0">
+      <section className="relative w-full  py-10 md:py-22 lg:py-30 ">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
           {/* Light mode gradients */}
           <div
             className="absolute right-60 top-40 bottom-0 h-60 w-100 rounded-full

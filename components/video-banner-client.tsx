@@ -32,7 +32,7 @@ export default function VideoBannerClient() {
           muted
           loop
           playsInline
-          poster="/videos/banner-poster.jpg"
+          poster="/videos/poster.png"
           onLoadedData={handleVideoReady}
           onCanPlay={handleVideoReady}
         />
